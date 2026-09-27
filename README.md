@@ -4,6 +4,8 @@
 같은 데이터를 세 방식으로 판정해 비교한다. 생성 방식과 Jev 방식은 같은 모델을 쓰고 사용 방법만 다르다.
 파일 하나(`main.go`), Go 표준 라이브러리만 쓴다.
 
+설명과 결과는 블로그 글 [알람 규칙 없이 LLM으로 알람 판정하기 - Jev 방식을 exaone으로 흉내 내기](https://corecode.pe.kr/normal/2026/09/27/jev-style-alert-with-exaone/)에 정리했다.
+
 - 고정 알람 규칙: `CPU > 90%`, `에러율 > 2%`, `p99 > 500ms`
 - LLM 판정(생성 방식): JSON으로 판정·원인·근거를 끝까지 생성
 - LLM 판정(Jev 방식): 보기(A/B/C…)를 주고 `num_predict: 1`로 토큰 1개만 생성, 그 자리의 `logprobs`에서 보기별 확률을 읽음
